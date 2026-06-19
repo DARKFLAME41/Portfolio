@@ -1,0 +1,423 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Harishankar S — Portfolio</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,300..900;1,9..144,300..900&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
+  <script>
+    (function() {
+      var saved = null;
+      try { saved = localStorage.getItem('theme'); } catch (e) {}
+      if (saved === 'dark') {
+        document.documentElement.setAttribute('data-theme', 'dark');
+      }
+    })();
+  </script>
+</head>
+<body>
+
+  <!-- Cursor blob -->
+  <div class="blob" id="blob"></div>
+
+  <!-- HEADER / NAV -->
+  <header class="nav">
+    <a href="#top" class="nav__logo">HS<span class="dot">.</span></a>
+    <nav class="nav__links">
+      <a href="#about" class="scribble-link">About</a>
+      <a href="#education" class="scribble-link">Education</a>
+      <a href="#skills" class="scribble-link">Skills</a>
+      <a href="#projects" class="scribble-link">Projects</a>
+      <a href="#achievements" class="scribble-link">Achievements</a>
+      <a href="#contact" class="scribble-link">Contact</a>
+    </nav>
+    <button class="nav__toggle" id="navToggle" aria-label="Toggle menu">
+      <span></span><span></span><span></span>
+    </button>
+    <button class="theme-toggle" id="themeToggle" aria-label="Toggle dark mode">
+      <span class="theme-toggle__icon">🌙</span>
+    </button>
+  </header>
+
+  <!-- HERO -->
+  <section class="hero" id="top">
+    <div class="hero__bg-shapes" aria-hidden="true">
+      <div class="shape shape--circle"></div>
+      <div class="shape shape--blob"></div>
+      <div class="shape shape--tri"></div>
+    </div>
+
+    <div class="hero__content">
+      <p class="eyebrow">Hello, I'm</p>
+      <h1 class="hero__title">
+        <span class="line">Harishankar</span>
+        <span class="line line--accent">S</span>
+      </h1>
+      <p class="hero__role">Full Stack Developer</p>
+      <p class="hero__subtitle">
+        Full stack developer &amp; CS student who enjoys building things —
+        from campus apps to game-y side projects.
+      </p>
+      <div class="hero__cta">
+        <a href="#projects" class="btn btn--primary">See my work</a>
+        <a href="#contact" class="btn btn--ghost">Say hello</a>
+      </div>
+    </div>
+
+    <div class="hero__photo">
+      <div class="hero__photo-frame">
+        <img src="assets/photo.jpg" alt="Harishankar S" onerror="this.parentElement.classList.add('hero__photo-frame--empty')">
+        <div class="hero__photo-fallback">HS</div>
+      </div>
+    </div>
+
+    <div class="hero__scroll" aria-hidden="true">
+      <span>Scroll</span>
+      <div class="hero__scroll-line"></div>
+    </div>
+  </section>
+
+  <!-- ABOUT -->
+  <section class="about" id="about">
+    <div class="about__visual" aria-hidden="true">
+      <div class="about__circle">
+        <img src="photo.jpg" alt="Harishankar S" class="about__photo">
+      </div>
+      <div class="about__sticker">3rd year ✦</div>
+    </div>
+    <div class="about__content">
+      <h2 class="section-title">About <span class="highlight">me</span></h2>
+      <p>
+        I'm a 3rd year Computer Science student interested in web
+        development and game development.
+      </p>
+      <p>
+        I like turning ideas into working software — whether that's a
+        platform for students to collaborate, a system for tracking traffic,
+        or a tool for managing court cases. I enjoy the process of breaking a
+        messy problem down into something that actually runs, and then
+        making it a little less messy.
+      </p>
+      <p>
+        Outside of coursework, I spend a lot of time on personal projects —
+        partly to learn new tools, and partly because I just like building
+        things. I'm especially drawn to projects with a real user in mind,
+        even if that user is just me and my classmates.
+      </p>
+    </div>
+  </section>
+
+  <!-- EDUCATION -->
+  <section class="education" id="education">
+    <div class="section-head">
+      <h2 class="section-title">My <span class="highlight">education</span></h2>
+      <p class="section-sub">The path that got me here so far.</p>
+    </div>
+
+    <div class="timeline">
+      <div class="timeline__item">
+        <div class="timeline__dot"></div>
+        <div class="timeline__content">
+          <span class="timeline__year">3rd Year — Present</span>
+          <h3 class="timeline__title">B.E. Computer Science &amp; Engineering</h3>
+          <p class="timeline__desc">National Engineering College — currently in my 3rd year, with a CGPA of 6.6, focusing on web development, OOP, and database systems.</p>
+        </div>
+      </div>
+
+      <div class="timeline__item">
+        <div class="timeline__dot"></div>
+        <div class="timeline__content">
+          <span class="timeline__year">2024</span>
+          <h3 class="timeline__title">Higher Secondary — 12th Standard</h3>
+          <p class="timeline__desc">Vel's Vidhyalaya, Kovilpatti — completed my Higher Secondary education with a focus on the Science stream, building a strong foundation in Mathematics and Computer Science.</p>
+        </div>
+      </div>
+
+      <div class="timeline__item">
+        <div class="timeline__dot"></div>
+        <div class="timeline__content">
+          <span class="timeline__year">2022</span>
+          <h3 class="timeline__title">Secondary School — 10th Standard</h3>
+          <p class="timeline__desc">Vel's Vidhyalaya, Kovilpatti — completed my Secondary School Leaving Certificate (SSLC), developing core academic skills and a growing interest in technology.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- SKILLS -->
+  <section class="skills-section" id="skills">
+    <div class="section-head">
+      <h2 class="section-title">My <span class="highlight">skills</span></h2>
+      <p class="section-sub">Languages, tools, and the concepts behind them.</p>
+    </div>
+
+    <div class="skills-grid">
+      <div class="skills-group">
+        <h3 class="skills-group__title">Languages</h3>
+        <div class="skills">
+          <span class="skill-pill">C / C++</span>
+          <span class="skill-pill">Java</span>
+          <span class="skill-pill">Python</span>
+          <span class="skill-pill">SQL</span>
+        </div>
+      </div>
+
+      <div class="skills-group">
+        <h3 class="skills-group__title">Tools</h3>
+        <div class="skills">
+          <span class="skill-pill">VS Code</span>
+          <span class="skill-pill">GitHub</span>
+          <span class="skill-pill">MySQL</span>
+          <span class="skill-pill">Postman</span>
+        </div>
+      </div>
+
+      <div class="skills-group">
+        <h3 class="skills-group__title">Concepts &amp; Libraries</h3>
+        <div class="skills">
+          <span class="skill-pill">Data Structures</span>
+          <span class="skill-pill">OOPS</span>
+          <span class="skill-pill">Java</span>
+          <span class="skill-pill">DAA</span>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- PROJECTS -->
+  <section class="work" id="projects">
+    <div class="section-head">
+      <h2 class="section-title">Selected <span class="highlight">projects</span></h2>
+      <p class="section-sub">A few things I've built — click a card to see more.</p>
+    </div>
+
+    <div class="cards">
+      <article class="card card--coral" data-tilt>
+        <div class="card__tag">Web App</div>
+        <h3 class="card__title">Campus Connect</h3>
+        <p class="card__desc">A collaboration platform for students to share notes, discuss, and find teammates.</p>
+        <div class="card__meta">
+          <span>HTML</span><span>CSS</span><span>JavaScript</span>
+        </div>
+        <button class="card__link" onclick="openProject('campus')">View details →</button>
+      </article>
+
+      <article class="card card--teal" data-tilt>
+        <div class="card__tag">C++</div>
+        <h3 class="card__title">Traffic Management System</h3>
+        <p class="card__desc">A C++ based system for monitoring and managing traffic in real time.</p>
+        <div class="card__meta">
+          <span>C++</span><span>OOP</span><span>File Handling</span>
+        </div>
+        <button class="card__link" onclick="openProject('traffic')">View details →</button>
+      </article>
+
+      <article class="card card--violet" data-tilt>
+        <div class="card__tag">Java</div>
+        <h3 class="card__title">Court Case Management System</h3>
+        <p class="card__desc">A Java application for tracking court cases, lawyers, and hearing schedules.</p>
+        <div class="card__meta">
+          <span>Java</span><span>OOPS</span><span>MySQL</span>
+        </div>
+        <button class="card__link" onclick="openProject('court')">View details →</button>
+      </article>
+    </div>
+  </section>
+
+  <!-- MODAL -->
+  <div id="modal" class="modal">
+    <div class="modal-content">
+      <button class="close" onclick="closeProject()" aria-label="Close">&times;</button>
+      <h2 id="title"></h2>
+      <p id="desc"></p>
+      <ul id="points"></ul>
+      <div class="modal-links" id="modalLinks"></div>
+    </div>
+  </div>
+
+  <!-- ACHIEVEMENTS -->
+  <section class="achievements" id="achievements">
+    <div class="section-head">
+      <h2 class="section-title">Certifications &amp; <span class="highlight">achievements</span></h2>
+      <p class="section-sub">Courses, internships, and events I've been part of.</p>
+    </div>
+
+    <!-- Achievements -->
+    <h3 class="subsection-title">🏆 Achievements</h3>
+    <div class="achieve-grid">
+      <div class="achieve-card">
+        <span class="achieve-card__icon">🏆</span>
+        <h3 class="achieve-card__title">Tech Hunt</h3>
+        <p class="achieve-card__desc">IEEE Student Branch — National Engineering College, Jul 2025</p>
+      </div>
+
+      <div class="achieve-card">
+        <span class="achieve-card__icon">🔐</span>
+        <h3 class="achieve-card__title">Cryptera 2k26</h3>
+        <p class="achieve-card__desc">Coimbatore Institute of Technology</p>
+      </div>
+
+      <div class="achieve-card">
+        <span class="achieve-card__icon">💡</span>
+        <h3 class="achieve-card__title">Nexcodia 2k25</h3>
+        <p class="achieve-card__desc">Velammal Institute of Technology</p>
+      </div>
+
+      <div class="achieve-card">
+        <span class="achieve-card__icon">🚀</span>
+        <h3 class="achieve-card__title">Code Spring 2.0</h3>
+        <p class="achieve-card__desc">National Engineering College</p>
+      </div>
+    </div>
+
+    <!-- Certifications -->
+    <h3 class="subsection-title">📜 Certifications</h3>
+    <div class="cert-grid">
+
+      <div class="cert-card" onclick="openCert('cert1.png', 'Basics of Computer Networking', 'Great Learning Academy, Mar 2025')">
+        <div class="cert-card__thumb">
+          <img src="cert1.png" alt="Basics of Computer Networking">
+          <div class="cert-card__overlay"><span>View</span></div>
+        </div>
+        <div class="cert-card__info">
+          <h4>Basics of Computer Networking</h4>
+          <p>Great Learning Academy · Mar 2025</p>
+        </div>
+      </div>
+
+      <div class="cert-card" onclick="openCert('cert7.png', 'Artificial Intelligence Fundamentals', 'Great Learning Academy, Mar 2025')">
+        <div class="cert-card__thumb">
+          <img src="cert7.png" alt="Artificial Intelligence Fundamentals">
+          <div class="cert-card__overlay"><span>View</span></div>
+        </div>
+        <div class="cert-card__info">
+          <h4>Artificial Intelligence Fundamentals</h4>
+          <p>Great Learning Academy · Mar 2025</p>
+        </div>
+      </div>
+
+      <div class="cert-card" onclick="openCert('cert8.png', 'Python IDLE', 'Great Learning Academy, Mar 2025')">
+        <div class="cert-card__thumb">
+          <img src="cert8.png" alt="Python IDLE">
+          <div class="cert-card__overlay"><span>View</span></div>
+        </div>
+        <div class="cert-card__info">
+          <h4>Python IDLE</h4>
+          <p>Great Learning Academy · Mar 2025</p>
+        </div>
+      </div>
+
+      <div class="cert-card" onclick="openCert('cert6.png', 'Technical English for Engineers', 'NPTEL — IIT Madras, Aug–Oct 2024')">
+        <div class="cert-card__thumb">
+          <img src="cert6.png" alt="Technical English for Engineers">
+          <div class="cert-card__overlay"><span>View</span></div>
+        </div>
+        <div class="cert-card__info">
+          <h4>Technical English for Engineers</h4>
+          <p>NPTEL — IIT Madras · Aug–Oct 2024</p>
+        </div>
+      </div>
+
+      <div class="cert-card" onclick="openCert('cert5.png', 'Introduction to Internet of Things (Elite)', 'NPTEL — IIT Kharagpur, Jul–Oct 2025')">
+        <div class="cert-card__thumb">
+          <img src="cert5.png" alt="Introduction to Internet of Things">
+          <div class="cert-card__overlay"><span>View</span></div>
+        </div>
+        <div class="cert-card__info">
+          <h4>Introduction to Internet of Things <span class="cert-badge">Elite</span></h4>
+          <p>NPTEL — IIT Kharagpur · Jul–Oct 2025</p>
+        </div>
+      </div>
+
+      <div class="cert-card" onclick="openCert('cert3.png', 'Software Development Internship', 'Prodigy InfoTech, Sep 2025')">
+        <div class="cert-card__thumb">
+          <img src="cert3.png" alt="Software Development Internship">
+          <div class="cert-card__overlay"><span>View</span></div>
+        </div>
+        <div class="cert-card__info">
+          <h4>Software Development Internship</h4>
+          <p>Prodigy InfoTech · Sep 2025</p>
+        </div>
+      </div>
+
+      <div class="cert-card" onclick="openCert('cert2.png', 'Full Stack Web Development', 'Anapty CodeEmy Technologies, Nov 2025')">
+        <div class="cert-card__thumb">
+          <img src="cert2.png" alt="Full Stack Web Development">
+          <div class="cert-card__overlay"><span>View</span></div>
+        </div>
+        <div class="cert-card__info">
+          <h4>Full Stack Web Development</h4>
+          <p>Anapty CodeEmy Technologies · Nov 2025</p>
+        </div>
+      </div>
+
+      <div class="cert-card" onclick="openCert('cert9.png', 'Next-Gen Cyber Security with AI', 'Skillumni, Mar 2026')">
+        <div class="cert-card__thumb">
+          <img src="cert9.png" alt="Next-Gen Cyber Security with AI">
+          <div class="cert-card__overlay"><span>View</span></div>
+        </div>
+        <div class="cert-card__info">
+          <h4>Next-Gen Cyber Security with AI</h4>
+          <p>Skillumni · Mar 2026</p>
+        </div>
+      </div>
+
+      <div class="cert-card" onclick="openCert('cert4.png', 'SnowPro Associate: Platform', 'Snowflake, Mar 2026')">
+        <div class="cert-card__thumb">
+          <img src="cert4.png" alt="SnowPro Associate: Platform">
+          <div class="cert-card__overlay"><span>View</span></div>
+        </div>
+        <div class="cert-card__info">
+          <h4>SnowPro Associate: Platform</h4>
+          <p>Snowflake · Mar 2026</p>
+        </div>
+      </div>
+
+    </div>
+  </section>
+
+  <!-- CERTIFICATE LIGHTBOX -->
+  <div id="certModal" class="cert-modal" onclick="closeCert()">
+    <div class="cert-modal__inner" onclick="event.stopPropagation()">
+      <button class="cert-modal__close" onclick="closeCert()">&times;</button>
+      <img id="certModalImg" src="" alt="">
+      <div class="cert-modal__caption">
+        <strong id="certModalTitle"></strong>
+        <span id="certModalSub"></span>
+      </div>
+    </div>
+  </div>
+
+  <!-- CONTACT -->
+  <section class="contact" id="contact">
+    <h2 class="contact__title">
+      Got a project in mind?<br>
+      <span class="highlight highlight--big">Let's talk.</span>
+    </h2>
+    <a href="mailto:24104041@nec.edu.in" class="contact__email">24104041@nec.edu.in</a>
+
+    <div class="contact-details">
+      <a href="tel:+916382662036" class="contact-detail">
+        <span class="contact-detail__icon">📞</span> +91 63826 62036
+      </a>
+      <span class="contact-detail">
+        <span class="contact-detail__icon">📍</span> Kovilpatti, Thoothukudi Dist, Tamil Nadu
+      </span>
+    </div>
+
+    <div class="socials">
+      <a href="https://github.com/DARKFLAME41" class="social-link" target="_blank" rel="noopener">GitHub</a>
+      <a href="https://www.linkedin.com/in/darkflame/" class="social-link" target="_blank" rel="noopener">LinkedIn</a>
+    </div>
+  </section>
+
+  <footer class="footer">
+    <p>Built with curiosity &amp; a lot of debugging — © 2026 Harishankar S</p>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>
